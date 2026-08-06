@@ -38,9 +38,14 @@ main > section > h3:first-child {
   padding-top: 0 !important;
 }
 
-/* 单独缩小合作原则和付款方式上面的空隙 */
+/* 直接缩小合作原则和付款方式标题上面的空隙 */
 main > section.tight-top {
-  margin-top: 6px !important;
+  margin-top: 0 !important;
+}
+
+main > section.tight-top > h2 {
+  margin-top: -14px !important;
+  margin-bottom: 8px !important;
 }
     :root {
       --background: #f4f0e7;
