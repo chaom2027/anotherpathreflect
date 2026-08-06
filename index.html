@@ -290,23 +290,52 @@
   margin: 8px auto;
   }
 
-.price-row {
-  display: grid;
-  grid-template-columns: max-content max-content;
-  column-gap: 10px;
-  align-items: baseline;
-  margin-bottom: 4px;
-  font-size: 17px;
-  }
+/* 强制让文书名称和价格靠近 */
+.price-grid {
+  width: fit-content !important;
+  max-width: 100% !important;
+  margin: 8px auto !important;
+}
 
-.price-name {
-  text-align: left;
-  }
+.price-row {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: baseline !important;
+  gap: 8px !important;
+  width: auto !important;
+  margin: 0 0 4px 0 !important;
+}
+
+.price-name,
+.price-value {
+  width: auto !important;
+  min-width: 0 !important;
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
 
 .price-value {
-  text-align: left;
-  font-weight: 700;
-  white-space: nowrap;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 720px) {
+  .price-grid {
+    width: 100% !important;
+  }
+
+  .price-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 4px 8px !important;
+  }
+
+  .price-name,
+  .price-value {
+    text-align: left !important;
+  }
 }
     /* ======================
        合作原则
@@ -675,9 +704,9 @@
           </p>
 
           <p>
-            <strong>
-              为保证服务质量和反馈效果，一次服务仅针对一篇申请文书。
-            </strong>
+           <p>
+  <strong>为保证服务质量和反馈效果，一次服务仅针对一篇申请文书。</strong>
+           </p>
           </p>
         </div>
 
