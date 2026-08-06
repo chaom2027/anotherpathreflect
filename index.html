@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="Another Path | Reflect 帮助申请美国研究生和本科项目的申请者梳理经历、找到故事并写出保留个人声音的申请文书。"
+  >
+
+  <title>Another Path | Reflect</title>
+
+  <style>
+    :root {
+      --background: #f4f0e7;
+      --text: #171717;
+      --page-width: 1040px;
+      --copy-width: 900px;
+      --list-width: 600px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family:
+        Georgia,
+        "Noto Serif SC",
+        "Songti SC",
+        "STSong",
+        serif;
+      line-height: 1.72;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus,
+    a:active,
+    a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    /* =========================
+       封面
+    ========================= */
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 520px;
+      overflow: hidden;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.04);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: min(calc(100% - 64px), 1180px);
+      height: 100%;
+      margin: 0 auto;
+    }
+
+    .brand {
+      position: absolute;
+      top: 26px;
+      left: 28px;
+      max-width: 72%;
+      margin: 0;
+      color: #2f2f2f;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+      font-size: clamp(30px, 4vw, 50px);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-line {
+      position: absolute;
+      top: 92px;
+      left: 28px;
+      width: 105px;
+      height: 2px;
+      background: #2f2f2f;
+    }
+
+    .hero-copy {
+      position: absolute;
+      top: 112px;
+      left: 28px;
+      width: min(560px, 58vw);
+      margin: 0;
+      text-align: left;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.68;
+    }
+
+    /* =========================
+       主体
+    ========================= */
+
+    main {
+      width: min(calc(100% - 32px), var(--page-width));
+      margin: 0 auto;
+      padding: 2px 0 40px;
+    }
+
+    section {
+      margin: 0;
+      padding: 22px 0 0;
+    }
+
+    h2,
+    h3 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin-bottom: 9px;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 0;
+      text-align: left;
+      font-size: 17px;
+    }
+
+    .content-wide {
+      width: min(100%, var(--copy-width));
+      margin: 0 auto;
+    }
+
+    .content-medium {
+      width: min(100%, 820px);
+      margin: 0 auto;
+    }
+
+    .content-list {
+      width: min(100%, var(--list-width));
+      margin: 0 auto;
+    }
+
+    .paragraphs p + p {
+      margin-top: 11px;
+    }
+
+    /* =========================
+       为什么是我
+    ========================= */
+
+    .why-me p {
+      text-indent: 2em;
+    }
+
+    /* =========================
+       我的方式
+    ========================= */
+
+    .approach p + p {
+      margin-top: 9px;
+    }
+
+    .approach-item {
+      margin-top: 10px;
+    }
+
+    /* =========================
+       免费初步咨询
+    ========================= */
+
+    .consult-intro {
+      margin-bottom: 6px;
+    }
+
+    ul {
+      text-align: left;
+    }
+
+    .simple-list {
+      margin: 6px 0 9px;
+      padding-left: 24px;
+    }
+
+    .simple-list li {
+      margin: 0 0 3px;
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    /* =========================
+       服务项目
+    ========================= */
+
+    .service {
+      padding-top: 20px;
+    }
+
+    .service-description {
+      width: min(100%, 820px);
+      margin: 0 auto 8px;
+      text-align: left;
+    }
+
+    .service-list-block {
+      width: min(100%, var(--list-width));
+      margin: 8px auto 0;
+    }
+
+    .service-list-title {
+      margin: 0 0 3px;
+      text-align: left;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .service-list {
+      margin: 0 0 9px;
+      padding-left: 24px;
+      text-align: left;
+    }
+
+    .service-list li {
+      margin: 0 0 3px;
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    .service-note {
+      width: min(100%, 820px);
+      margin: 7px auto 0;
+      text-align: left;
+      font-size: 16px;
+    }
+
+    /* =========================
+       价格
+    ========================= */
+
+    .price-grid {
+      width: min(100%, 760px);
+      margin: 8px auto;
+    }
+
+    .price-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) max-content;
+      column-gap: 18px;
+      align-items: baseline;
+      margin-bottom: 4px;
+      font-size: 17px;
+    }
+
+    .price-name,
+    .price-value {
+      text-align: left;
+    }
+
+    .price-value {
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    /* =========================
+       合作原则
+    ========================= */
+
+    .principles p + p {
+      margin-top: 8px;
+    }
+
+    /* =========================
+       付款方式
+    ========================= */
+
+    .payment-heading {
+      margin-bottom: 4px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .payment-list {
+      margin: 0 0 8px;
+      padding-left: 24px;
+      text-align: left;
+    }
+
+    .payment-list li {
+      margin-bottom: 2px;
+      font-size: 17px;
+    }
+
+    /* =========================
+       联系方式
+    ========================= */
+
+    .contact-details {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      column-gap: 14px;
+      row-gap: 5px;
+      width: min(100%, 620px);
+      margin: 0 auto;
+      text-align: left;
+      font-size: 17px;
+    }
+
+    .contact-row {
+      display: contents;
+    }
+
+    .contact-label {
+      text-align: right;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .contact-value {
+      min-width: 0;
+      overflow-wrap: anywhere;
+      text-align: left;
+    }
+
+    .contact-value a,
+    .contact-value a:hover,
+    .contact-value a:focus,
+    .contact-value a:active,
+    .contact-value a:visited {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 0;
+    }
+
+    .contact-note {
+      width: min(100%, var(--copy-width));
+      margin: 10px auto 0;
+      text-align: left;
+    }
+
+    .copyright {
+      margin-top: 17px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* =========================
+       手机显示
+    ========================= */
+
+    @media (max-width: 720px) {
+      .hero {
+        height: 360px;
+      }
+
+      .hero-inner {
+        width: calc(100% - 28px);
+      }
+
+      .brand {
+        top: 18px;
+        left: 12px;
+        max-width: 78%;
+        font-size: 32px;
+      }
+
+      .hero-line {
+        top: 67px;
+        left: 12px;
+        width: 88px;
+      }
+
+      .hero-copy {
+        top: 84px;
+        left: 12px;
+        width: 68%;
+        font-size: 13px;
+        line-height: 1.55;
+      }
+
+      main {
+        width: calc(100% - 24px);
+        padding-bottom: 32px;
+      }
+
+      section {
+        padding-top: 18px;
+      }
+
+      .service {
+        padding-top: 17px;
+      }
+
+      h2 {
+        margin-bottom: 8px;
+        font-size: 21px;
+      }
+
+      h3 {
+        margin-bottom: 7px;
+        font-size: 18px;
+      }
+
+      p,
+      .simple-list li,
+      .service-list-title,
+      .service-list li,
+      .price-row,
+      .payment-list li,
+      .contact-details {
+        font-size: 15px;
+      }
+
+      .why-me p {
+        text-indent: 2em;
+      }
+
+      .price-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-bottom: 8px;
+      }
+
+      .contact-details {
+        grid-template-columns: max-content minmax(0, 1fr);
+        column-gap: 9px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site">
+
+    <!-- 封面 -->
+
+    <header class="hero">
+      <img
+        class="hero-image"
+        src="./sevan-lake.png"
+        alt="塞凡湖风景"
+      >
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-inner">
+        <h1 class="brand">
+          Another Path | Reflect
+        </h1>
+
+        <div class="hero-line"></div>
+
+        <p class="hero-copy">
+          Another Path | Reflect 帮助申请美国研究生和本科项目的申请者，深入梳理经历，找到最能体现自己的故事，写成清晰、连贯、保留个人声音的申请文书。
+        </p>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- 为什么是我 -->
+
+      <section class="why-me">
+        <h2>为什么是我</h2>
+
+        <div class="content-wide paragraphs">
+          <p>
+            我是第一代大学生和研究生，求学经历并不是沿着一条标准路线展开的。我知道，要从复杂、零散，甚至看似没有关联的经历中，找到一条清楚的主线并不容易。
+          </p>
+
+          <p>
+            我二十多岁来到美国，开始大学教育。我先后在北卡罗来纳大学教堂山分校（UNC–Chapel Hill）学习政治学，参加普林斯顿大学的公共政策暑期项目，并进入哈佛肯尼迪学院（Harvard Kennedy School）攻读公共政策硕士学位。
+          </p>
+
+          <p>
+            申请本科和研究生时，我也曾反复纠结该写什么、哪些经历值得展开，以及怎样把不同阶段的经历连接起来，写成一篇真正属于自己的文书。这个过程让我意识到，很多人缺少的不是可以写的内容，而是停下来重新理解自己经历的机会。
+          </p>
+
+          <p>
+            这也是我创立 Another Path | Reflect 的原因：帮助申请者重新理解自己的经历，找到值得讲述的内容，写出不讨好、不套模板、真正表达内心想法的申请文书。这样的文书也更容易让招生官停下来认真阅读。
+          </p>
+        </div>
+      </section>
+
+      <!-- 我的方式 -->
+
+      <section class="approach">
+        <h2>我的方式</h2>
+
+        <div class="content-wide">
+          <p>
+            好的申请文书不需要复杂或华丽的语言。
+          </p>
+
+          <p>
+            更重要的是，用简单、准确的表达，把你的经历和思考写得有力量。
+          </p>
+
+          <p class="approach-item">
+            <strong>简洁：</strong>不堆砌词藻，也不刻意使用复杂的句子。越准确、克制的表达，往往越有力量。
+          </p>
+
+          <p class="approach-item">
+            <strong>细节：</strong>与其直接告诉读者“我很饿”或“我很累”，不如写出你多久没有吃饭、连续工作了多长时间，以及当时身体和情绪上的真实反应。具体的细节能让读者感受到你的处境，而不仅仅知道你当时很辛苦。
+          </p>
+
+          <p class="approach-item">
+            <strong>角度：</strong>一件看似很小的事，也可以写得很深刻，关键在于你如何理解它，以及它为什么对你重要。失败也不一定是负面的。更重要的是，你从中学到了什么，它怎样影响了你，以及你后来作出了什么选择。
+          </p>
+        </div>
+      </section>
+
+      <!-- 免费初步咨询 -->
+
+      <section>
+        <h2>免费初步咨询</h2>
+
+        <div class="content-medium">
+          <p class="consult-intro">
+            在正式合作前，我们会先进行一次约20分钟的线上沟通，主要用于：
+          </p>
+
+          <ul class="simple-list">
+            <li>了解你的申请目标</li>
+            <li>了解目前的文书进度和需求</li>
+            <li>介绍我的服务方式</li>
+            <li>判断我们是否适合合作</li>
+          </ul>
+
+          <p>
+            这次咨询不包括文书修改、深入构思或具体写作指导。如果我们双方都认为适合合作，再进入正式服务。我会确认具体服务内容和费用。双方<strong>签署服务确认书并完成付款后</strong>，再开始正式服务。
+          </p>
+        </div>
+      </section>
+
+      <!-- 文书构思咨询 -->
+
+      <section class="service">
+        <h3>
+          文书构思咨询（60分钟，100美元）
+        </h3>
+
+        <div class="service-list-block">
+          <div class="service-list-title">
+            适合：
+          </div>
+
+          <ul class="service-list">
+            <li>还没有开始写文书</li>
+            <li>不知道应该写什么</li>
+            <li>不确定哪些经历最值得展开</li>
+            <li>希望在动笔前先理清思路</li>
+            <li>希望建立清晰的写作方向和整体框架</li>
+          </ul>
+
+          <div class="service-list-title">
+            服务包括：
+          </div>
+
+          <ul class="service-list">
+            <li>梳理与文书相关的个人经历</li>
+            <li>讨论哪些内容最值得写</li>
+            <li>寻找合适的切入角度</li>
+            <li>明确文书重点和主线</li>
+            <li>搭建基本结构或提纲</li>
+            <li>讨论下一步如何完成初稿</li>
+          </ul>
+        </div>
+
+        <p class="service-note">
+          <strong>
+            这项服务的重点是帮助你形成自己的思路和写作方向，不包括完整文书修改。
+          </strong>
+        </p>
+      </section>
+
+      <!-- 申请文书修改 -->
+
+      <section class="service">
+        <h3>申请文书修改</h3>
+
+        <p class="service-description">
+          适合已经完成初稿，希望获得深入反馈和修改建议的申请者。
+        </p>
+
+        <div class="price-grid">
+          <div class="price-row">
+            <div class="price-name">
+              Personal Statement 或 Statement of Purpose：
+            </div>
+
+            <div class="price-value">
+              每篇200美元
+            </div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-name">
+              Supplemental Essay，300词以内：
+            </div>
+
+            <div class="price-value">
+              每篇100美元
+            </div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-name">
+              Supplemental Essay，301至650词：
+            </div>
+
+            <div class="price-value">
+              每篇150美元
+            </div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-name">
+              Supplemental Essay，超过650词：
+            </div>
+
+            <div class="price-value">
+              每篇200美元
+            </div>
+          </div>
+        </div>
+
+        <div class="content-wide paragraphs">
+          <p>
+            其他本科或研究生申请文书，将根据具体要求和预计工作量报价。
+          </p>
+
+          <p>
+            <strong>
+              为保证服务质量和反馈效果，一次服务仅针对一篇申请文书。
+            </strong>
+          </p>
+        </div>
+
+        <div class="service-list-block">
+          <div class="service-list-title">
+            服务包括：
+          </div>
+
+          <ul class="service-list">
+            <li>完整阅读并分析一篇文书</li>
+            <li>针对内容、结构、逻辑、叙事和表达提供详细反馈</li>
+            <li>帮助强化整体结构、叙事逻辑和表达效果</li>
+            <li>在保留申请者个人声音的基础上，提出必要的句子层面修改建议</li>
+            <li>一次45分钟线上沟通，讨论反馈意见并回答修改过程中遇到的问题</li>
+          </ul>
+        </div>
+
+        <p class="service-note">
+          如需进一步修改、继续咨询或修改其他文书，将根据新的工作内容单独报价。预计完成时间将在确认合作后，根据具体工作内容和当前预约情况与申请者确认。
+        </p>
+      </section>
+
+      <!-- 合作原则 -->
+
+      <section>
+        <h2>合作原则</h2>
+
+        <div class="content-wide principles">
+          <p>
+            <strong>不代写：</strong>我不会替你完成一篇文书。我会通过提问、讨论和具体反馈，帮助你梳理想法、作出取舍，并逐渐形成独立写好文书的能力。最终的经历、思考、判断和表达都应属于申请者本人。
+          </p>
+
+          <p>
+            <strong>尊重申请者的想法：</strong>我会认真倾听并尊重你的想法和意见，也会根据自己的专业判断提出建议。最终是否采纳，由你自己决定。
+          </p>
+
+          <p>
+            <strong>AI是工具，不是判断者：</strong>AI可以帮助整理思路、比较不同表达，也能提高写作和修改的效率。但什么值得写、什么真正代表你、哪些建议应该接受，仍然需要你自己判断。AI可以参与写作，但不能取代你的思考和选择。
+          </p>
+
+          <p>
+            <strong>不保证录取结果：</strong>我会认真对待每一次合作，也会尽力帮助你把能够控制的部分做好。但最终的录取结果由学校决定，不是我能够控制的。
+          </p>
+        </div>
+      </section>
+
+      <!-- 付款方式 -->
+
+      <section>
+        <h2>付款方式</h2>
+
+        <div class="content-list">
+          <p class="payment-heading">
+            目前支持以下付款方式：
+          </p>
+
+          <ul class="payment-list">
+            <li>支付宝（通过 Stripe Payment Link）</li>
+            <li>PayPal</li>
+            <li>Zelle（美国）</li>
+            <li>Apple Cash（美国）</li>
+            <li>美国银行转账（ACH/Wire）</li>
+          </ul>
+        </div>
+
+        <p class="content-wide">
+          双方确认合作内容并签署服务确认书后，需一次性支付全部服务费用。收到付款后，我将正式开始提供服务。
+        </p>
+      </section>
+
+      <!-- 联系我 -->
+
+      <section>
+        <h2>联系我</h2>
+
+        <div class="contact-details">
+          <div class="contact-row">
+            <span class="contact-label">
+              Email：
+            </span>
+
+            <span class="contact-value">
+              <a href="mailto:anotherpath.reflect@outlook.com">
+                anotherpath.reflect@outlook.com
+              </a>
+            </span>
+          </div>
+
+          <div class="contact-row">
+            <span class="contact-label">
+              WhatsApp：
+            </span>
+
+            <span class="contact-value">
+              <a href="https://wa.me/16179875710">
+                +1 617 987 5710
+              </a>
+            </span>
+          </div>
+
+          <div class="contact-row">
+            <span class="contact-label">
+              微信：
+            </span>
+
+            <span class="contact-value">
+              anotherpath_reflect
+            </span>
+          </div>
+        </div>
+
+        <p class="contact-note">
+          Email用于发送文书、服务确认书及其他正式沟通。微信和WhatsApp用于预约咨询、线上沟通和视频会议。
+        </p>
+
+        <div class="copyright">
+          © 2026 Another Path | Reflect
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>
