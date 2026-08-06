@@ -17,34 +17,26 @@
   <title>Another Path | Reflect</title>
 
   <style>
-
-  /* 统一每个 section 之间的距离 */
-  main > section {
-    margin: 0 !important;
-    padding-top: 0 !important;
-  }
-  main > section + section {
-    margin-top: 28px !important;
-  }
-
-  /* 统一标题与正文之间的距离 */
-  main > section > h2,
-  main > section > h3 {
-    margin-top: 0 !important;
-    margin-bottom: 12px !important;
-  }
-
-  /* 取消服务部分原来单独设置的距离 */
-  .service {
-    padding-top: 0 !important;
-  }
-  /* 单独缩小合作原则和付款方式上方的距离 */
-main > section.service + section {
-  margin-top: 18px !important;
+ /* 统一所有 section 之间的距离 */
+main > section {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-main > section.service + section + section {
-  margin-top: 18px !important;
+main > section + section {
+  margin-top: 20px !important;
+}
+
+/* 统一每个标题和正文之间的距离 */
+main > section > h2:first-child,
+main > section > h3:first-child {
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+
+/* 取消 service 原来单独设置的间距 */
+.service {
+  padding-top: 0 !important;
 }
   :root {
     --background: #f4f0e7;
