@@ -38,6 +38,14 @@
   .service {
     padding-top: 0 !important;
   }
+  /* 单独缩小合作原则和付款方式上方的距离 */
+main > section.service + section {
+  margin-top: 18px !important;
+}
+
+main > section.service + section + section {
+  margin-top: 18px !important;
+}
   :root {
     --background: #f4f0e7;
     --text: #171717;
