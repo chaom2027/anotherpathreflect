@@ -481,7 +481,7 @@
     <header class="hero">
       <img
         class="hero-image"
-        src="https://raw.githubusercontent.com/chaom2027/anotherpathreflect/main/cover.jpg"
+        src="./cover.jpg"
         alt=""
       >
 
