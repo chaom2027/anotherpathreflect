@@ -197,7 +197,9 @@ main > section.tight-top > h2 {
       text-align: left;
       font-size: 17px;
     }
-
+       strong {
+      font-weight: 800;
+       }
     .content-wide {
       width: min(100%, var(--copy-width));
       margin: 0 auto;
@@ -230,16 +232,36 @@ main > section.tight-top > h2 {
 
     /* =========================
        我的方式
-    ========================= */
+    ========================= *
 
-    .approach p + p {
-      margin-top: 9px;
-    }
+    .approach-intro {
+  max-width: 760px;
+  margin: 0 auto 18px;
+  text-align: center;
+}
 
-    .approach-item {
-      margin-top: 10px;
-    }
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: start;
+}
 
+.approach-card {
+  padding-top: 12px;
+  border-top: 1px solid rgba(23, 23, 23, 0.45);
+}
+
+.approach-card h3 {
+  margin: 0 0 8px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.approach-card p {
+  margin: 0;
+  text-align: left;
+}
     /* =========================
        免费初步咨询
     ========================= */
@@ -425,10 +447,21 @@ main > section.tight-top > h2 {
     ========================= */
 
     @media (max-width: 720px) {
-      .hero {
-        height: 360px;
-      }
+  .approach-intro {
+    margin-bottom: 14px;
+    text-align: left;
+  }
 
+  .approach-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .approach-card {
+    padding-top: 10px;
+  }
+}
+</style>
       .hero-inner {
         width: calc(100% - 28px);
       }
@@ -553,34 +586,44 @@ main > section.tight-top > h2 {
           </p>
         </div>
       </section>
+  
+     <!-- 我的方式 -->
 
-      <!-- 我的方式 -->
+<section class="approach">
+ 
+     <h2>我的方式</h2>
 
-      <section class="approach">
-        <h2>我的方式</h2>
+  <div class="content-wide">
+    <p class="approach-intro">
+      好的申请文书不需要复杂或华丽的语言。更重要的是，用简单、准确的表达，把你的经历和思考写得有力量。
+    </p>
 
-        <div class="content-wide">
-          <p>
-            好的申请文书不需要复杂或华丽的语言。
-          </p>
+    <div class="approach-grid">
 
-          <p>
-            更重要的是，用简单、准确的表达，把你的经历和思考写得有力量。
-          </p>
+      <div class="approach-card">
+        <h3>简洁</h3>
+        <p>
+          不堆砌词藻，也不刻意使用复杂的句子。越准确、克制的表达，往往越有力量。
+        </p>
+      </div>
 
-          <p class="approach-item">
-            <strong>简洁：</strong>不堆砌词藻，也不刻意使用复杂的句子。越准确、克制的表达，往往越有力量。
-          </p>
+      <div class="approach-card">
+        <h3>细节</h3>
+        <p>
+          与其直接告诉读者“我很饿”或“我很累”，不如写出你多久没有吃饭、连续工作了多长时间，以及当时身体和情绪上的真实反应。具体的细节能让读者感受到你的处境，而不仅仅知道你当时很辛苦。
+        </p>
+      </div>
 
-          <p class="approach-item">
-            <strong>细节：</strong>与其直接告诉读者“我很饿”或“我很累”，不如写出你多久没有吃饭、连续工作了多长时间，以及当时身体和情绪上的真实反应。具体的细节能让读者感受到你的处境，而不仅仅知道你当时很辛苦。
-          </p>
+      <div class="approach-card">
+        <h3>角度</h3>
+        <p>
+          一件看似很小的事，也可以写得很深刻，关键在于你如何理解它，以及它为什么对你重要。失败也不一定是负面的。更重要的是，你从中学到了什么，它怎样影响了你，以及你后来作出了什么选择。
+        </p>
+      </div>
 
-          <p class="approach-item">
-            <strong>角度：</strong>一件看似很小的事，也可以写得很深刻，关键在于你如何理解它，以及它为什么对你重要。失败也不一定是负面的。更重要的是，你从中学到了什么，它怎样影响了你，以及你后来作出了什么选择。
-          </p>
-        </div>
-      </section>
+    </div>
+  </div>
+</section>
 
       <!-- 免费初步咨询 -->
 
