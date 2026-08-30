@@ -23,9 +23,11 @@ main > section {
   margin: 0 !important;
   padding: 0 !important;
 }
-
 main > section + section {
   margin-top: 20px !important;
+}
+main > section.why-me:first-child {
+  margin-top: 32px !important;
 }
 
 /* 统一标题和正文之间的距离 */
@@ -226,10 +228,7 @@ main > section.tight-top > h2 {
     /* =========================
        为什么是我
     ========================= */
-.why-me {
-  padding-top: 28px;
-}
-
+    
 .why-me p {
   text-indent: 2em;
 }
@@ -455,11 +454,7 @@ main > section.tight-top > h2 {
       text-align: center;
       font-size: 14px;
     }
-    .hero + main {
 
-    padding-top: 32px;
-
-   }
     /* =========================
        手机显示
     ========================= */
@@ -506,7 +501,6 @@ main > section.tight-top > h2 {
 
       main {
      width: calc(100% - 24px);
-     padding-top: 28px;
      padding-bottom: 30px;
       }
       section {
