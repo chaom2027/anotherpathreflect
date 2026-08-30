@@ -42,13 +42,11 @@ main > section > h3:first-child {
 }
 
 /* 直接缩小合作原则和付款方式标题上面的空隙 */
-main > section.tight-top {
-  margin-top: 0 !important;
-}
-
 main > section.tight-top > h2 {
-  margin-top: -14px !important;
-  margin-bottom: 8px !important;
+  transform: translateY(-8px);
+}
+main > section.contact-space > h2 {
+  transform: translateY(6px);
 }
     :root {
       --background: #f4f0e7;
@@ -750,7 +748,7 @@ main > section.tight-top > h2 {
 
       <!-- 合作原则 -->
 
-          <section>
+        <section class="tight-top">
         <h2>合作原则</h2>
 
         <div class="content-wide principles editing-note">
@@ -774,7 +772,7 @@ main > section.tight-top > h2 {
 
       <!-- 付款方式 -->
 
-         <section>
+        <section class="tight-top">
         <h2>付款方式</h2>
 
         <div class="content-list">
@@ -798,7 +796,7 @@ main > section.tight-top > h2 {
 
       <!-- 联系我 -->
 
-          <section>
+        <section class="contact-space">
         <h2>联系我</h2>
 
         <div class="contact-details">
